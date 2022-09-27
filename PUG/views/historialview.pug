@@ -1,0 +1,27 @@
+extends layout  
+
+block historialview
+
+    h1 Lista de productos: 
+    -const prod = {producto};
+    - const estilo = "width:50px;height:50px;"
+    if prod
+        table(class="table table-striped")
+            thead
+                tr
+                    th #
+                    th Title
+                    th Price
+                    th Thumbnail
+                tr    
+                        for item in producto
+                            tr
+                                th= item.id
+                                td= item.title 
+                                td= item.price
+                                td 
+                                    img(src=item.thumbnail style=estilo)
+        a(href="/form") 
+            button.btn.btn-success(type="submit", name="asdf") formulario Producto
+    else 
+        h2 no hay productos en la lista!

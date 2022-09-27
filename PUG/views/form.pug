@@ -1,0 +1,28 @@
+extends layout  
+
+block form
+
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            h4#myModalLabel.modal-title
+              | Cargar Producto
+          // Modal Body
+          .modal-body
+            //#editForm.form(role='form' method='GET' action='https://www.google.com/')
+            form(role='form' method='post' action='/personas')
+              div.form-group
+                label(for='title') Title:
+                input#title.form-control(type='text', placeholder='title' name='title')
+              div.form-group
+                label(for='price') Price:
+                input#price.form-control(type='price', placeholder='100' name='price')
+              div.form-group
+                label(for='thumbnail') Thumbnail:
+                input#thumbnail.form-control(type='thumbnail', placeholder='thumbnail' name='thumbnail')
+              button.btn.btn-primary(type="submit") Submit
+                
+          .modal-footer
+            a(href="/historialview") 
+              button.btn.btn-danger historial

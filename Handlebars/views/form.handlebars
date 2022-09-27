@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>   
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>         
+<body>
+<div class="container mt-1">
+<h1 style="color:blue;">Ingrese datos</h1><br>
+<form action="/personas" method="post">
+        <div class="form-group"><label for="title"><b>Title</b></label><input id="nombre" class="form-control"
+                        type="text" name="title"></div>
+        <div class="form-group"><label for="price"><b>Price</b></label><input id="apellido" class="form-control"
+                        type="number" name="price"></div>
+        <div class="form-group"><label for="thumbnail"><b>Thumbnail</b></label><input id="edad" class="form-control"
+                        type="text" name="thumbnail"></div><button class="btn btn-success mt-3 mb-5">Enviar</button>
+
+</form>
+<a href="/historialview"><button class="btn btn-danger mt-3 mb-5">ver historial</button></a>
+</div>
+</body>
+</html>

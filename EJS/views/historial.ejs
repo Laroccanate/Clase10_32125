@@ -1,0 +1,15 @@
+<h2 style="color:crimson;">Historial</h2><% if(producto.length > 0){ %><div class="table-responsive">
+    <table class="table table-dark table-striped">
+        <tr style="color: yellow;">
+            <th>#</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Thumbnail</th>
+        </tr><% for (const productos of producto) {%><tr>
+            <td><%=productos.id%></td>
+            <td><%=productos.title%></td>
+            <td><%=productos.price%></td>
+            <td><img src="<%=productos.thumbnail%>" width="50px" height="50px"></img></td>
+        </tr><%};%>
+    </table>
+</div><% } else{ %><h3 class="alert alert-danger">no se encontraron datos</h1><% } %>
