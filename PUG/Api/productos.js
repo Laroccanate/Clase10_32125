@@ -21,7 +21,7 @@ class ProductosApi {
             return JSON.parse(products);
         }catch(error){
             console.log(this.ruta);
-            console.log('hubo un error en getALL')
+            console.log('hubo un error en getAll')
             return [];
         }
         
